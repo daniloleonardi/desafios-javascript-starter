@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Exercício 1</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <script>
+            // Crie uma função que dado o objeto retorne o conteúdo esperado.
+            function descricao(a, b, c, d, e) {
+                console.log('O usuário mora em ' +d+ '/' +e+ ', no bairro ' +c+ ', na rua '+a+' com nº '+b+'.');
+            }
+
+            var endereco = {
+                rua: "Rua dos pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
+            };
+
+            var showAll = descricao(endereco.rua, endereco.numero, endereco.bairro, endereco.cidade, endereco.uf);
+            console.log(showAll);
+
+            // O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros" com nº 1293.
+        </script>
+    </body>
+</html>
