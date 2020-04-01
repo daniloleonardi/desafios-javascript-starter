@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <title>
+            Exercício 3
+        </title>
+    </head>
+    <body>
+        <ul id='a001'></ul>
+
+        <script>
+            // A partir do seguinte vetor:
+            var nomes = ['Diego', 'Gabriel', 'Lucas'];
+            // Preencha uma lista (<ul>) no HTML com os itens.
+            var containerLista = document.querySelector('#a001');
+            containerLista.style.listStyle = 'none';
+            containerLista.style.padding = 0;
+
+            for(nome of nomes) {
+                var listaNomes = document.createElement('li');
+                var itensLista = document.createTextNode(nome)
+
+                listaNomes.appendChild(itensLista);
+                containerLista.appendChild(listaNomes);
+            }
+
+        </script>
+    </body>
+</html>

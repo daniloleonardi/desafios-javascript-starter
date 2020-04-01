@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <title>
+            Exercício 4
+        </title>
+    </head>
+    <body>
+        <input type="textNode" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+        <ul id='a001'></ul>
+
+        <script>
+        // Seguindo o resultado do exercício anterior adicione um input em tela e um botão.
+        // Ao clicar no botão, a função adicionar() deve ser disparada.    
+            var nomes = ['Diego', 'Gabriel', 'Lucas'];
+
+            var campoNome = document.querySelector('input[name = nome]');
+            var btnNome = document.querySelector('button');
+
+            var containerLista = document.querySelector('#a001');
+            containerLista.style.listStyle = 'none';
+            containerLista.style.padding = 0;
+
+            function addItens(nome) {
+                var listaNomes = document.createElement('li');
+                var itensLista = document.createTextNode(nome)
+
+                listaNomes.appendChild(itensLista);
+                containerLista.appendChild(listaNomes);
+            }
+
+            function adicionar() {
+                addItens(campoNome.value);
+                campoNome.value = '';
+            }
+
+            for(nome of nomes) {
+                addItens(nome);
+            }
+
+        </script>
+    </body>
+</html>

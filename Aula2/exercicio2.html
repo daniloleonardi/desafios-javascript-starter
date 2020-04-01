@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <title>
+            Exercício 2
+        </title>
+    </head>
+    <body>
+        <div id='a1'>
+            <button id='a2'>Criar quadrado</button>
+        </div>
+        <script>
+            var squareSpace = document.querySelector('#a1');
+            var squareCreator = document.querySelector('#a2');
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = '#';
+                for ( var i = 0; i < 6; i++ ) {
+                    color += letters[Math.floor( Math.random() * 16 )];
+                }
+                return color;  
+            }
+
+            squareCreator.onclick = function() {
+                var squareFish = document.createElement('div');
+
+                squareFish.style.width = 100;
+                squareFish.style.height = 100;
+                squareFish.style.backgroundColor = '#F00';
+
+                squareSpace.appendChild(squareFish);
+
+                squareFish.onmouseover = function(){
+                    squareFish.style.backgroundColor = getRandomColor();
+                }
+             
+            }
+        </script>
+    </body>
+</html>
