@@ -18,7 +18,7 @@ function renderTodos() {
         linkElement.setAttribute('href', '#');
 
         var pos = todos.indexOf(todo);
-        linkElement.setAttribute('onclick', 'deleteTodo(' + pos + ')')
+        linkElement.setAttribute('onclick', 'deleteTodo(' + pos + ')');
 
         var linkText = document.createTextNode('Excluir');
 
@@ -44,6 +44,10 @@ function addTodo() {
 }
 
 buttonElement.onclick = addTodo;
+inputElement.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {addTodo()
+    }
+});
 
 function deleteTodo(pos) {
     todos.splice(pos, 1);
