@@ -1,6 +1,6 @@
 //App para adicionar e remover itens de uma lista.
 //Os itens são adicionados preenchendo o input e apertando o botão "Adicionar".
-//As alterações são salvas utilizando "localStrorage"
+//As alterações são salvas utilizando "localStorage"
 
 var listElement = document.querySelector('#app ul');
 var inputElement = document.querySelector('#app input');
