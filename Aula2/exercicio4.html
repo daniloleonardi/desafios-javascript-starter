@@ -7,7 +7,7 @@
     </head>
     <body>
         <input type="textNode" name="nome">
-        <button onClick="adicionar()">Adicionar</button>
+        <button>Adicionar</button>
         <ul id='a001'></ul>
 
         <script>
@@ -38,6 +38,8 @@
             for(nome of nomes) {
                 addItens(nome);
             }
+
+            btnNome.onclick = adicionar;
 
         </script>
     </body>
